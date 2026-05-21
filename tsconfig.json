@@ -1,0 +1,28 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/**/*",
+    "../hlw-ele-core/src/**/*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "outDir": "dist",
+    "rootDir": "../..",
+    "tsBuildInfoFile": "../../node_modules/.cache/tsbuildinfo/hlw-ele-mp-wx.tsbuildinfo",
+    "baseUrl": "../..",
+    "paths": {
+      "@hlw-ele/core": [
+        "packages/hlw-ele-core/src/index.ts"
+      ],
+      "@hlw-ele/core/renderer": [
+        "packages/hlw-ele-core/src/renderer/index.ts"
+      ],
+      "@hlw-ele/core/types": [
+        "packages/hlw-ele-core/src/types/index.d.ts"
+      ]
+    }
+  }
+}
